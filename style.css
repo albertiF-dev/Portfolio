@@ -8,6 +8,7 @@
 * {
     padding: 0px;
     margin: 0px;
+    box-sizing: border-box;
 }
 
 /*
@@ -16,13 +17,13 @@
 ================================
 */
 .tema-claro {
-    --cor-fundo: #f9f8f8;
-    --cor-fonte: #984447;
-    --cor-destaque: #0e103d;
-    --cor-borda: #05a8aa;
-    --cor-sombra: #034732;
-    --cor-link: rgba(110, 153, 37, 0.559);
-    --cor-anima: rgba(161, 79, 21, 0.592);
+    --cor-fundo-a: #f9f8f8;
+    --cor-fonte-a: #984447;
+    --cor-destaque-a: #0e103d;
+    --cor-borda-a: #05a7aa44;
+    --cor-sombra-a: #03473159;
+    --cor-link-a: rgba(110, 153, 37, 0.559);
+    --cor-anima-a: rgba(161, 79, 21, 0.592);
 }
 
 /*
@@ -31,13 +32,13 @@
 ================================
 */
 .tema-escuro {
-    --cor-fundo: #150f0b;
-    --cor-fonte: #74561a;
-    --cor-destaque: #743e1a;
-    --cor-borda: #F4A300;
-    --cor-sombra: #B07A0F;
-    --cor-link: #69182E;
-    --cor-anima: #482D1B;
+    --cor-fundo-b: #150f0b;
+    --cor-fonte-b: #74561a;
+    --cor-destaque-b: #743e1a;
+    --cor-borda-b: #F4A300;
+    --cor-sombra-b: #B07A0F;
+    --cor-link-b: #69182E;
+    --cor-anima-b: #482D1B;
 }
 
 /*
@@ -48,6 +49,11 @@
 html, body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1em;
+    /* background-color: darkslategray; */
+}
+
+.projetos {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 /*
@@ -56,11 +62,72 @@ html, body {
 ================================
 */
 
+h2, h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+}
+
+section {
+    /* border: 2px blue solid; */
+}
+
+article {
+    border: 2px green solid;
+}
+
+li {
+    /* border: 1px red solid; */
+}
+
+li > a {
+    text-decoration: none;
+}
+
+div > li > a {
+    text-decoration: none;
+}
+
+.projetos {
+    background-color: var(--cor-fundo-a);
+    display: grid;
+    grid-template: repeat(7, auto) / repeat(2, 1fr);
+    gap: 5px;
+    padding: 15px;
+    margin: 13px;
+    border: 2px solid var(--cor-borda-a);
+}
+.projetos hr.linha {
+    border: none;
+    height: 4px;
+    width: 90vw;
+    background-color: darkred;
+    margin: 12px 0px;
+    border-radius: 2px;
+}
+.projetos ul {
+    background-color: lightblue;
+    list-style: outside;
+    padding: 10px;
+    margin: 8px;
+    border: 2px double var(--cor-borda-a);
+    border-radius: 6px;
+    box-shadow: 5px 5px 10px var(--cor-sombra-a);
+}
+.projetos li {
+    background-color: lightskyblue;
+    width: 60%;
+    padding: 5px;
+    margin: 3px;
+    border-radius: 6px;
+    border: 2px solid var(--cor-borda-a);
+    box-shadow: 5px 5px 10px var(--cor-sombra-a);
+    transition: all 0.3s ease;
+}
 
 /*==============================
     COMPONENTES
 ================================
-*/
+*/ /*:hover*/ 
 
 
 /*
